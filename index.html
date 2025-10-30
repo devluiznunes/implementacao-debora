@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementação de Arquivos - AEDII</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trabalho de Laboratório de Algoritmos e Estrutura de Dados II</h1>
+            <h2>Implementação de Arquivos</h2>
+        </header>
+
+        <div class="content">
+            <!-- Seletor de Tipo de Arquivo -->
+            <div class="file-selector">
+                <label for="fileType">Selecione o Tipo de Arquivo:</label>
+                <select id="fileType">
+                    <option value="">-- Escolha uma opção --</option>
+                    <option value="agenda">Agenda Telefônica</option>
+                    <option value="produtos">Produtos</option>
+                    <option value="filmes">Filmes</option>
+                    <option value="musicas">Músicas</option>
+                    <option value="alunos">Alunos</option>
+                    <option value="clientes">Clientes</option>
+                    <option value="professores">Professores</option>
+                    <option value="disciplinas">Disciplinas</option>
+                    <option value="associados">Associados</option>
+                    <option value="livros">Livros</option>
+                </select>
+            </div>
+
+            <!-- Formulário Dinâmico -->
+            <div id="formSection" class="form-section" style="display: none;">
+                <h3 id="formTitle">Cadastrar Registro</h3>
+                <form id="recordForm">
+                    <div id="dynamicFields"></div>
+                    <button type="submit" class="btn-primary">Adicionar Registro</button>
+                </form>
+            </div>
+
+            <!-- Listagem de Registros -->
+            <div id="listSection" class="list-section" style="display: none;">
+                <div class="list-header">
+                    <h3>Registros Cadastrados</h3>
+                    <div class="list-actions">
+                        <span class="record-count">Total: <strong id="recordCount">0</strong></span>
+                        <button id="deleteFileBtn" class="btn-danger">Remover Arquivo</button>
+                    </div>
+                </div>
+                <div id="recordsList" class="records-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
